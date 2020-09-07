@@ -8,7 +8,17 @@ public class Ventana extends JFrame {
 	
 	public Ventana()
 	{
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(500, 500);
+		setLocation(350, 350);
+		setTitle("TP 3 Laboratorio 4");
+		setLayout(null);
 		
+	}
+	
+	public void cambioVisibilidad(boolean estado)
+	{
+		setVisible(true);
 	}
 
 }
