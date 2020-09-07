@@ -1,5 +1,14 @@
 package ejemplo1;
 
-public class Ventana {
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame {
+	
+	// Constructor
+	
+	public Ventana()
+	{
+		
+	}
 
 }
