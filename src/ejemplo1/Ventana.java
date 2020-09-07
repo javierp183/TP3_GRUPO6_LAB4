@@ -1,11 +1,17 @@
 package ejemplo1;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class Ventana extends JFrame {
 	
-	// Constructor
+	private static final long serialVersionUID = 1L;
+	private JButton boton;
 	
+	// Constructor
 	public Ventana()
 	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -14,6 +20,13 @@ public class Ventana extends JFrame {
 		setTitle("TP 3 Laboratorio 4");
 		setLayout(null);
 		
+		boton = new JButton();
+		boton.setText("Aceptar");
+		boton.setBounds(10, 15, 140, 30);
+		boton.addActionListener(new eventoBoton());
+		
+		getContentPane().add(boton);
+		
 	}
 	
 	public void cambioVisibilidad(boolean estado)
@@ -21,4 +34,15 @@ public class Ventana extends JFrame {
 		setVisible(true);
 	}
 
+}
+
+class eventoBoton implements ActionListener
+{
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		System.out.println("Mensaje");
+		
+	}
+	
 }
