@@ -126,11 +126,57 @@ public class VentanaEjercicio2 extends JFrame {
 		JButton btnCalcular = new JButton("Calcular");
 		btnCalcular.setBounds(332, 83, 107, 43);
 		contentPane.add(btnCalcular);
+		btnCalcular.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int n1 = Integer.parseInt(txtNota1.getText());
+				int n2 = Integer.parseInt(txtNota2.getText());
+				int n3 = Integer.parseInt(txtNota3.getText());
+				
+				int notaTotal = (n1+n2+n3)/3;
+				
+				txtPromedio.setText(Integer.toString(notaTotal));
+				
+				if(n1 >= 6 && n2 >= 6 && n3 >= 6) {
+					
+				
+				if(comboBox.getSelectedIndex() == 0) {
+					
+				if(notaTotal >= 8) {
+					txtCondicion.setText("Promoción");
+				}
+				
+				if(notaTotal >= 6 && notaTotal < 8) {
+					txtCondicion.setText("Regular");
+					
+				}
+				}
+				else {
+					txtCondicion.setText("Libre");
+				}
+				}
+				
+				if(n1 < 6 || n2 < 6 || n3 < 6) {
+					
+					txtCondicion.setText("Libre");
+					
+				}
+
+			}
+		});
 		
 		JButton btnNuevo = new JButton("Nuevo");
 		btnNuevo.setToolTipText("");
 		btnNuevo.setBounds(332, 133, 107, 36);
 		contentPane.add(btnNuevo);
+		btnNuevo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtNota1.setText("");
+				txtNota2.setText("");
+				txtNota3.setText("");
+				txtPromedio.setText("");
+				txtCondicion.setText("");
+			}
+		});
 		
 		JButton btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {
