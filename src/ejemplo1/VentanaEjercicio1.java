@@ -75,10 +75,11 @@ public class VentanaEjercicio1 extends JFrame {
 					if(txtApellido.getText().isEmpty()==true) {txtApellido.setBackground(Color.red); txtApellido.setForeground(Color.white);}
 						if(txtTelefono.getText().isEmpty()==true) { txtTelefono.setBackground(Color.red); txtTelefono.setForeground(Color.white);  }
 							if(txtFecha.getText().isEmpty()==true) { txtFecha.setBackground(Color.red); txtFecha.setForeground(Color.white); }
+							
 				if (txtNombre.getText().isEmpty()==false&&txtApellido.getText().isEmpty()==false&&txtTelefono.getText().isEmpty()==
 						false&&txtFecha.getText().isEmpty()==false) {
-				lblLosDatosIngresados.setText("Los datos ingresados fueron:" + txtNombre.getText() + " " + 
-						txtApellido.getText() + " " + txtTelefono.getText() +" " + txtFecha.getText());
+				lblLosDatosIngresados.setText("Los datos ingresados fueron: " + txtNombre.getText() + ", " + 
+						txtApellido.getText() + ", " + txtTelefono.getText() +", " + txtFecha.getText());
 				
 				//cambia fondo y limpia texto
 				txtNombre.setBackground(Color.white);
